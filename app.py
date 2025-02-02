@@ -50,7 +50,7 @@ EXPERIENCE = {
     },
     "Deviators Club": {
         "post": "Club Lead",
-        "date": "Februaru 2024 to -",
+        "date": "February 2024 to -",
     },
 }
 
