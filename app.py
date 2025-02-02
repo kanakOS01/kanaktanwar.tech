@@ -25,11 +25,6 @@ SOCIAL_MEDIA = {
     "Dev.to": "https://dev.to/kanakos01",
     "Mail": f"mailto:{EMAIL}"
 }
-SOCIAL_ICONS = {
-    "LinkedIn": "🔗",
-    "GitHub": "💻",
-    "X": "🐦",
-}
 RESUME_LINK = "https://drive.google.com/file/d/17-Vd_Q7akVatBmQq1FaToH5nGEvEEI7V/view?usp=sharing"
 PROJECTS = {
     "Git Chat": {
@@ -52,14 +47,25 @@ PROJECTS = {
 EXPERIENCE = {
     "MentorPal.ai": {
         "post": "AI Intern",
-        "date": "June 2024 to July 2024",
+        "date": "Jun 2024 to Jul 2024",
+        "website": "https://www.mentorpal.ai/",
+        "description": """
+            - Engineered an extension to suggest personalized messages to prospective leads on LinkedIn.
+            - Developed an internal tool to allow QA with various resumes using LangChain and LLM.
+            - Scraped various websites using Selenium and BeautifulSoup to provide client leads.  
+        """
     },
     "Deviators Club": {
         "post": "Club Lead",
-        "date": "February 2024 to -",
-    },
+        "date": "Feb 2024 to Feb 2025",
+        "website": "https://www.deviatorsdce.tech/",
+        "description": """
+            - Co-Founded a coding and development club in college.
+            - Taught students about technologies like git, dsa and organised hackathons.
+            - Built a community of 500+ members.
+        """
+    }
 }
-
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 with open(css_file) as f:
@@ -101,4 +107,20 @@ with intro_c2:
     unsafe_allow_html=True
 )
 
-st.divider()
+
+# experience
+st.markdown("\n")
+st.markdown("## Experience")
+exp = st.container(border=True)
+exp1, exp2 = exp.tabs(EXPERIENCE.keys())
+
+with exp1:
+    st.markdown(f"<h4>{EXPERIENCE['MentorPal.ai']['post']}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['MentorPal.ai']['date']}</p>", unsafe_allow_html=True)
+    st.text(f"{EXPERIENCE['MentorPal.ai']['description']}")
+
+# Experience in Deviators Club
+with exp2:
+    st.markdown(f"<h4>{EXPERIENCE['Deviators Club']['post']}</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['Deviators Club']['date']}</p>", unsafe_allow_html=True)
+    st.text(f"{EXPERIENCE['Deviators Club']['description']}")
