@@ -23,7 +23,7 @@ SOCIAL_MEDIA = {
     "GitHub": "https://github.com/kanakOS01",
     "X": "https://x.com/kanaktwts",
     "Dev.to": "https://dev.to/kanakos01",
-    "Mail": f"mailto:{EMAIL}"
+    "Mail": f"mailto:{EMAIL}",
 }
 RESUME_LINK = "https://drive.google.com/file/d/17-Vd_Q7akVatBmQq1FaToH5nGEvEEI7V/view?usp=sharing"
 PROJECTS = {
@@ -32,11 +32,11 @@ PROJECTS = {
         "github": "https://github.com/kanakOS01/git-chat",
     },
     "Social Media API": {
-        "desc": "FastAPI CRUD operations with PostgreSQL and CI/CD with Github Actions",
+        "desc": "FastAPI CRUD ops with Postgres and CI/CD",
         "github": "https://github.com/kanakOS01/social-media-fastapi",
     },
-    "Movie Recommendation System": {
-        "desc": "Content-based recommendation system",
+    "Movie Recommender": {
+        "desc": "Content-based Recommendation System",
         "github": "https://github.com/kanakOS01/movie-recommender-system",
     },
     "House Price Prediction": {
@@ -53,7 +53,7 @@ EXPERIENCE = {
             - Engineered an extension to suggest personalized messages to prospective leads on LinkedIn.
             - Developed an internal tool to allow QA with various resumes using LangChain and LLM.
             - Scraped various websites using Selenium and BeautifulSoup to provide client leads.  
-        """
+        """,
     },
     "Deviators Club": {
         "post": "Club Lead",
@@ -63,8 +63,8 @@ EXPERIENCE = {
             - Co-Founded a coding and development club in college.
             - Taught students about technologies like git, dsa and organised hackathons.
             - Built a community of 500+ members.
-        """
-    }
+        """,
+    },
 }
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -80,7 +80,8 @@ with intro_c1:
 with intro_c2:
     st.title(NAME)
     st.markdown(DESCRIPTION)
-    st.markdown("""
+    st.markdown(
+        """
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <div class="social-icons">
@@ -100,12 +101,14 @@ with intro_c2:
             <i class="fa-solid fa-envelope"></i>
         </a>
     </div>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )
     st.markdown("\n")
     st.markdown(
-    f'<a href="{RESUME_LINK}" target="_blank" class="btn" style="color: white">Resume     <i class="fa-regular fa-file"></i></a>',
-    unsafe_allow_html=True
-)
+        f'<a href="{RESUME_LINK}" target="_blank" class="btn" style="color: white">Resume     <i class="fa-regular fa-file"></i></a>',
+        unsafe_allow_html=True,
+    )
 
 
 # experience
@@ -116,11 +119,84 @@ exp1, exp2 = exp.tabs(EXPERIENCE.keys())
 
 with exp1:
     st.markdown(f"<h4>{EXPERIENCE['MentorPal.ai']['post']}</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['MentorPal.ai']['date']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['MentorPal.ai']['date']}</p>", unsafe_allow_html=True
+    )
     st.text(f"{EXPERIENCE['MentorPal.ai']['description']}")
 
 # Experience in Deviators Club
 with exp2:
     st.markdown(f"<h4>{EXPERIENCE['Deviators Club']['post']}</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['Deviators Club']['date']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['Deviators Club']['date']}</p>", unsafe_allow_html=True
+    )
     st.text(f"{EXPERIENCE['Deviators Club']['description']}")
+
+
+# projects
+st.markdown("\n")
+st.markdown("## Projects")
+p12 = st.container(border=False)
+p34 = st.container(border=False)
+
+p1, p2 = p12.columns(2, border=True)
+with p1:
+    st.markdown(f"<h4>Git Chat</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Git Chat']['desc']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="social-icons">
+        <a class="social-icons" href="{PROJECTS['Git Chat']['github']}" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+        </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('\n')
+
+with p2:
+    st.markdown(f"<h4>Social Media API</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Social Media API']['desc']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="social-icons">
+        <a class="social-icons" href="{PROJECTS['Social Media API']['github']}" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+        </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('\n')
+
+p3, p4 = p34.columns(2, border=True)
+with p3:
+    st.markdown(f"<h4>Movie Recommender</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Movie Recommender']['desc']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="social-icons">
+        <a class="social-icons" href="{PROJECTS['Movie Recommender']['github']}" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+        </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('\n')
+
+with p4:
+    st.markdown(f"<h4>House Price Prediction</h4>", unsafe_allow_html=True)
+    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['House Price Prediction']['desc']}</p>", unsafe_allow_html=True)
+    st.markdown(
+        f"""
+        <div class="social-icons">
+        <a class="social-icons" href="{PROJECTS['House Price Prediction']['github']}" target="_blank">
+            <i class="fa-brands fa-square-github"></i>
+        </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+    st.markdown('\n')
