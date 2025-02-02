@@ -1,0 +1,33 @@
+a {
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #9a9ea1; /* Change color on hover */
+}
+
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none !important;
+    color: white; 
+    border: solid 1px #464849;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Added transition for color change */
+}
+
+.btn:hover {
+    background-color: #464849;  /* Change background to white on hover */
+}
