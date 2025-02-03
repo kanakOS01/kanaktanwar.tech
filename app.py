@@ -66,6 +66,15 @@ EXPERIENCE = {
         """,
     },
 }
+SKILLS = {
+    "Languages": "Python, Bash, SQL, JavaScript",
+    "Frameworks": "FastAPI, Flask, LangChain, BS4, Selenium",
+    "AIML": "NumPy, Pandas, Matplotlib, Scikit Learn, Transformers",
+    "Database & ORM": "PostgreSQL, PostgreSQL, SQLAlchemy, Alembic",
+    "Tools": "Github Actions, AWS EC2, DigitalOcean Droplet, Docker",
+}
+
+
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 with open(css_file) as f:
@@ -114,23 +123,36 @@ with intro_c2:
 # experience
 st.markdown("\n")
 st.markdown("## Experience")
-exp = st.container(border=True)
-exp1, exp2 = exp.tabs(EXPERIENCE.keys())
+exp = st.container(border=False)
+# exp1, exp2 = exp.tabs(EXPERIENCE.keys())
+exp1, exp2 = exp.container(border=True), exp.container(border=True)
 
 with exp1:
-    st.markdown(f"<h4>{EXPERIENCE['MentorPal.ai']['post']}</h4>", unsafe_allow_html=True)
-    st.markdown(
-        f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['MentorPal.ai']['date']}</p>", unsafe_allow_html=True
-    )
-    st.text(f"{EXPERIENCE['MentorPal.ai']['description']}")
+    exp1.markdown("""
+    <b style='font-size: 24px;'> AI Intern </b> 
+    <br>
+    <b style='color: grey; font-size: 18px;'> Mentorpal.ai </b>
+    <br>
+    <b style='color: grey; font-size: 14px; font-weight: 100;'> Jun 2024 to Jul 2024 </b>
+    """, unsafe_allow_html=True)
+    exp1.text(f"{EXPERIENCE['MentorPal.ai']['description']}")
 
 # Experience in Deviators Club
 with exp2:
-    st.markdown(f"<h4>{EXPERIENCE['Deviators Club']['post']}</h4>", unsafe_allow_html=True)
-    st.markdown(
-        f"<p style='color: grey; font-size: 14px;'>{EXPERIENCE['Deviators Club']['date']}</p>", unsafe_allow_html=True
-    )
-    st.text(f"{EXPERIENCE['Deviators Club']['description']}")
+    exp2.markdown("""
+    <b style='font-size: 24px;'> Club Lead </b> 
+    <br>
+    <b style='color: grey; font-size: 18px;'> Deviators Club </b>
+    <br>
+    <b style='color: grey; font-size: 14px; font-weight: 100;'> Feb 2024 to Feb 2025 </b>
+    """, unsafe_allow_html=True)
+    exp2.text(f"{EXPERIENCE['Deviators Club']['description']}")
+
+
+# skills
+st.markdown("\n")
+st.markdown("## Skills")
+skills = st.container(border=True)
 
 
 # projects
@@ -141,9 +163,9 @@ p34 = st.container(border=False)
 
 p1, p2 = p12.columns(2, border=True)
 with p1:
-    st.markdown(f"<h4>Git Chat</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Git Chat']['desc']}</p>", unsafe_allow_html=True)
-    st.markdown(
+    p1.markdown(f"<h4>Git Chat</h4>", unsafe_allow_html=True)
+    p1.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Git Chat']['desc']}</p>", unsafe_allow_html=True)
+    p1.markdown(
         f"""
         <div class="social-icons">
         <a class="social-icons" href="{PROJECTS['Git Chat']['github']}" target="_blank">
@@ -153,12 +175,12 @@ with p1:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('\n')
+    p1.markdown('\n')
 
 with p2:
-    st.markdown(f"<h4>Social Media API</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Social Media API']['desc']}</p>", unsafe_allow_html=True)
-    st.markdown(
+    p2.markdown(f"<h4>Social Media API</h4>", unsafe_allow_html=True)
+    p2.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Social Media API']['desc']}</p>", unsafe_allow_html=True)
+    p2.markdown(
         f"""
         <div class="social-icons">
         <a class="social-icons" href="{PROJECTS['Social Media API']['github']}" target="_blank">
@@ -168,13 +190,13 @@ with p2:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('\n')
+    p2.markdown('\n')
 
 p3, p4 = p34.columns(2, border=True)
 with p3:
-    st.markdown(f"<h4>Movie Recommender</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Movie Recommender']['desc']}</p>", unsafe_allow_html=True)
-    st.markdown(
+    p3.markdown(f"<h4>Movie Recommender</h4>", unsafe_allow_html=True)
+    p3.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['Movie Recommender']['desc']}</p>", unsafe_allow_html=True)
+    p3.markdown(
         f"""
         <div class="social-icons">
         <a class="social-icons" href="{PROJECTS['Movie Recommender']['github']}" target="_blank">
@@ -184,12 +206,12 @@ with p3:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('\n')
+    p3.markdown('\n')
 
 with p4:
-    st.markdown(f"<h4>House Price Prediction</h4>", unsafe_allow_html=True)
-    st.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['House Price Prediction']['desc']}</p>", unsafe_allow_html=True)
-    st.markdown(
+    p4.markdown(f"<h4>House Price Prediction</h4>", unsafe_allow_html=True)
+    p4.markdown(f"<p style='color: grey; font-size: 16px;'>{PROJECTS['House Price Prediction']['desc']}</p>", unsafe_allow_html=True)
+    p4.markdown(
         f"""
         <div class="social-icons">
         <a class="social-icons" href="{PROJECTS['House Price Prediction']['github']}" target="_blank">
@@ -199,4 +221,4 @@ with p4:
         """,
         unsafe_allow_html=True,
     )
-    st.markdown('\n')
+    p4.markdown('\n')
