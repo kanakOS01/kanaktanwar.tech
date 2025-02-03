@@ -4,7 +4,7 @@ from PIL import Image
 
 
 dir = Path(__file__).parent
-css_file = dir / "styles" / "main.css"
+css_file = dir / "styles" / "app.css"
 profile_pic = dir / "assets" / "profile-pic.png"
 favicon = dir / "assets" / "k.png"
 

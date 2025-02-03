@@ -32,3 +32,7 @@ a {
 .btn:hover {
     background-color: #464849;  /* Change background to white on hover */
 }
+
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
