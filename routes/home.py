@@ -178,11 +178,11 @@ skills.html(
         <hr style="height: 0.5px; border-color: #464849;"/>
 
         <p>Database & ORM</p>
-        <p style="color: white; margin-top: -10px;">PostgreSQL, SQLAlchemy, Alembic</p>
+        <p style="color: white; margin-top: -10px;">PostgreSQL, MongoDB, SQLAlchemy, Alembic</p>
         <hr style="height: 0.5px; border-color: #464849;"/>
 
         <p>Tools</p>
-        <p style="color: white; margin-top: -10px;">Github Actions, AWS EC2, DigitalOcean Droplet, Docker</p>
+        <p style="color: white; margin-top: -10px;">Github Actions, AWS EC2, DO Droplet, Docker, Git Hooks</p>
     </div>
 """
 )
