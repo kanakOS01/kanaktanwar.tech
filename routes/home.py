@@ -1,7 +1,7 @@
-import streamlit as st
 from pathlib import Path
-from PIL import Image
 
+import streamlit as st
+from PIL import Image
 
 dir = Path(__file__).parent.parent
 css_file = dir / "styles" / "app.css"
@@ -133,23 +133,27 @@ exp = st.container(border=False)
 exp1, exp2 = exp.container(border=True), exp.container(border=True)
 
 with exp1:
-    exp1.html("""
+    exp1.html(
+        """
     <b style='font-size: 24px;'> AI Intern </b> 
     <br>
     <b style='color: grey; font-size: 18px;'> Mentorpal.ai </b>
     <br>
     <b style='color: grey; font-size: 14px; font-weight: 100;'> Jun 2024 to Jul 2024 </b>
-    """)
+    """
+    )
     exp1.text(f"{EXPERIENCE['MentorPal.ai']['description']}")
 
 with exp2:
-    exp2.html("""
+    exp2.html(
+        """
     <b style='font-size: 24px;'> Club Lead </b> 
     <br>
     <b style='color: grey; font-size: 18px;'> Deviators Club </b>
     <br>
     <b style='color: grey; font-size: 14px; font-weight: 100;'> Feb 2024 to Feb 2025 </b>
-    """)
+    """
+    )
     exp2.text(f"{EXPERIENCE['Deviators Club']['description']}")
 
 
@@ -158,7 +162,8 @@ st.markdown("\n")
 st.markdown("## Skills")
 skills = st.container(border=True)
 
-skills.html("""
+skills.html(
+    """
     <div style="font-family: Arial, sans-serif; color: #ccc; font-size: 20px;">
         <p>Languages</p>
         <p style="color: white; margin-top: -10px;">Python, Bash, SQL, JavaScript</p>
@@ -179,7 +184,8 @@ skills.html("""
         <p>Tools</p>
         <p style="color: white; margin-top: -10px;">Github Actions, AWS EC2, DigitalOcean Droplet, Docker</p>
     </div>
-""")
+"""
+)
 
 
 # projects
@@ -190,7 +196,8 @@ p34 = st.container(border=False)
 
 p1, p2 = p12.columns(2, border=True)
 with p1:
-    p1.html(f"""
+    p1.html(
+        f"""
         <b style='font-size: 24px;'>Git Chat</b>
         <p style='color: grey; font-size: 16px;'>{PROJECTS['Git Chat']['desc']}</p>
         <div class="social-icons">
@@ -198,11 +205,13 @@ with p1:
             <i class="fa-brands fa-square-github"></i>
         </a>
         </div>
-    """)
-    p1.markdown('\n')
+    """
+    )
+    p1.markdown("\n")
 
 with p2:
-    p2.html(f"""
+    p2.html(
+        f"""
         <b style='font-size: 24px;'>Social Media API</b>
         <p style='color: grey; font-size: 16px;'>{PROJECTS['Social Media API']['desc']}</p>
         <div class="social-icons">
@@ -210,12 +219,14 @@ with p2:
             <i class="fa-brands fa-square-github"></i>
         </a>
         </div>
-    """)
-    p2.markdown('\n')
+    """
+    )
+    p2.markdown("\n")
 
 p3, p4 = p34.columns(2, border=True)
 with p3:
-    p3.html(f"""
+    p3.html(
+        f"""
         <b style='font-size: 24px;'>Movie Recommender</b>
         <p style='color: grey; font-size: 16px;'>{PROJECTS['Movie Recommender']['desc']}</p>
         <div class="social-icons">
@@ -223,11 +234,13 @@ with p3:
             <i class="fa-brands fa-square-github"></i>
         </a>
         </div>
-    """)
-    p3.markdown('\n')
+    """
+    )
+    p3.markdown("\n")
 
 with p4:
-    p4.html(f"""
+    p4.html(
+        f"""
         <b style='font-size: 24px;'>House Price Prediction</b>
         <p style='color: grey; font-size: 16px;'>{PROJECTS['House Price Prediction']['desc']}</p>
         <div class="social-icons">
@@ -235,5 +248,6 @@ with p4:
             <i class="fa-brands fa-square-github"></i>
         </a>
         </div>
-    """)
-    p4.markdown('\n')
+    """
+    )
+    p4.markdown("\n")
