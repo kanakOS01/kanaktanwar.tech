@@ -76,7 +76,7 @@ SKILLS = {
 }
 
 
-st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
+# st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 with open(css_file) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
