@@ -29,7 +29,7 @@ def main():
         "Leetcode": "https://leetcode.com/u/kanaktanwarpro/",
         "Codechef": "https://www.codechef.com/users/kanaktanwarpro",
     }
-    RESUME_LINK = "https://drive.google.com/file/d/1ABneHuaO3A3KjECn0x-K-sQmhqUpiGsF/view?usp=drive_link"
+    RESUME_LINK = "https://kanakos01.github.io/kanakOS01/resume/resume.pdf"
     PROJECTS = {
         "Git Chat": {
             "desc": "RAG-based Q&A with GitHub repositories",
