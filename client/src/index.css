@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 3.9%; /* #0D1117 */
+  --foreground: 0 0% 90%; /* #E6E6E6 */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 8.9%; /* #161B22 */
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%; /* #30363D */
+  --input: 240 3.7% 15.9%;
+  --primary: 260 100% 65%; /* #7B5EFA neon blue-purple */
+  --primary-foreground: 240 10% 3.9%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 260 100% 65%;
+  --accent-foreground: 240 10% 3.9%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 260 100% 65%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%; /* #0D1117 */
+  --foreground: 0 0% 90%; /* #E6E6E6 */
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 8.9%; /* #161B22 */
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%; /* #30363D */
+  --input: 240 3.7% 15.9%;
+  --primary: 260 100% 65%; /* #7B5EFA neon blue-purple */
+  --primary-foreground: 240 10% 3.9%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 260 100% 65%;
+  --accent-foreground: 240 10% 3.9%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 260 100% 65%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono antialiased text-base;
+  }
+  
+  h1 {
+    @apply text-2xl font-bold;
+  }
+  
+  h2 {
+    @apply text-xl font-semibold;
+  }
+  
+  .container {
+    @apply max-w-xs mx-auto; /* Much narrower width (reduced by 75%) */
+  }
+}
+
+@layer components {
+  .ascii-container {
+    line-height: 1;
+    letter-spacing: 0.1em;
+    font-size: 0.5rem;
+    white-space: pre;
+    text-align: left;
+  }
+  
+  @media (min-width: 640px) {
+    .ascii-container {
+      font-size: 0.65rem;
+    }
+  }
+  
+  pre {
+    white-space: pre;
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .glow {
+    text-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)), 0 0 25px hsl(var(--primary));
+  }
+  
+  .hover-glow:hover {
+    text-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)), 0 0 25px hsl(var(--primary));
+    transition: all 0.3s ease;
+  }
+  
+  .neon-shadow {
+    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.5);
+  }
+  
+  .hover-neon:hover {
+    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.5), 0 0 25px hsl(var(--primary)/0.3);
+    border-color: hsl(var(--primary));
+    transition: all 0.3s ease;
+  }
+  
+  .typewriter {
+    overflow: hidden;
+    border-right: .15em solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  .ascii-box {
+    position: relative;
+    border: 1px dashed hsl(var(--primary));
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .ascii-box::before {
+    content: "+";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background-color: hsl(var(--background));
+    color: hsl(var(--primary));
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  
+  .ascii-box::after {
+    content: "+";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    background-color: hsl(var(--background));
+    color: hsl(var(--primary));
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  
+  .ascii-corner-tl {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: hsl(var(--background));
+    color: hsl(var(--primary));
+    padding: 0 5px;
+    content: "+";
+  }
+  
+  .ascii-corner-br {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: hsl(var(--background));
+    color: hsl(var(--primary));
+    padding: 0 5px;
+    content: "+";
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: hsl(var(--primary)) }
+  }
+}
