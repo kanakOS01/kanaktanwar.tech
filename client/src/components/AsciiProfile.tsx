@@ -43,8 +43,8 @@ const AsciiProfile = () => {
       <div className="mt-6 md:mt-0 md:ml-8 max-w-md">
         {about.map((paragraph, index) => (
           <p key={index} className="text-sm leading-relaxed mt-4 first:mt-0">
-            {paragraph.split(/\b(backend developer|AI engineer)\b/).map((part, i) => {
-              if (part === "backend developer" || part === "AI engineer") {
+            {paragraph.split(/\b(backend dev|ai engineer|x\/twitter|dev.to|github|ai generated)\b/).map((part, i) => {
+              if (part === "backend dev" || part === "ai engineer" || part === "x/twitter" || part === "dev.to" || part === "github" || part === "ai generated") {
                 return <span key={i} className="text-primary">{part}</span>;
               }
               return part;

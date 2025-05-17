@@ -1,6 +1,7 @@
 export interface Experience {
   title: string;
   company: string;
+  location: string;
   period: string;
   responsibilities: string[];
 }
@@ -13,8 +14,9 @@ export interface Skill {
 export interface Project {
   title: string;
   description: string;
+  techStack: string[];
   githubUrl: string;
-  asciiArt: string;
+  liveUrl?: string;
 }
 
 export interface PortfolioData {
@@ -37,41 +39,44 @@ export interface PortfolioData {
 }
 
 const portfolioData: PortfolioData = {
-  name: "Kanak Tanwar",
-  titles: ["AI Engineer", "Backend Developer", "Problem Solver"],
+  name: "kanak tanwar",
+  titles: ["backend dev", "ai engineer"],
   about: [
-    "Hello! I'm a backend developer and AI engineer passionate about building intelligent systems. I enjoy solving complex problems with elegant solutions, experimenting with new technologies, and contributing to open source.",
-    "When I'm not coding, you can find me exploring new technologies, participating in hackathons, or teaching others about programming."
+    "heyy, i'm kanak, a backend dev and ai engineer. i like open source.",
+    "my most active social is x/twitter, you can find me there.",
+    "check my github to know more about me. i also write some blogs on dev.to.",
+    "ohh, and this site is completely ai generated ;))"
   ],
   socials: {
-    linkedin: "https://www.linkedin.com/in/kanaktanwar",
-    github: "https://github.com/kanaktanwar",
-    twitter: "https://twitter.com/kanaktanwar",
-    email: "mailto:kanak.tanwar@example.com",
-    devto: "https://dev.to/kanaktanwar",
-    codechef: "https://www.codechef.com/users/kanaktanwar",
-    leetcode: "https://leetcode.com/kanaktanwar"
+    linkedin: "https://linkedin.com/in/kanak-tanwar",
+    github: "https://github.com/kanak0S01",
+    twitter: "https://x.com/kanaktwts",
+    email: "mailto:kanaktanwarpro@gmail.com",
+    devto: "https://dev.to/kanakos01",
+    codechef: "https://www.codechef.com/users/kanaktanwarpro",
+    leetcode: "https://leetcode.com/u/kanaktanwarpro"
   },
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
   experiences: [
     {
-      title: "AI Intern",
+      title: "ai intern",
       company: "Mentorpal.ai",
-      period: "Jan 2024 to Jul 2024",
+      location: "remote",
+      period: "jan 2024 to jul 2024",
       responsibilities: [
-        "Engineered an extension to suggest personalized messages to prospective leads on LinkedIn.",
-        "Developed an internal tool to allow QA with various resumes using LangChain and LLM.",
-        "Scraped various websites using Selenium and BeautifulSoup to provide client leads."
+        "built an extension to suggest personalized messages to prospective leads on linkedin.",
+        "made an internal tool to allow QA with various resumes with langchain + llms.",
+        "scraped various websites using selenium and bs4 to provide client leads."
       ]
     },
     {
-      title: "Club Lead",
+      title: "club lead",
       company: "Deviators Club",
-      period: "Feb 2024 to Feb 2025",
+      location: "hybrid",
+      period: "feb 2024 to feb 2025",
       responsibilities: [
-        "Co-Founded a coding and development club in college.",
-        "Taught students about technologies like git, dsa and organized hackathons.",
-        "Built a community of 500+ members."
+        "co-founded a dev club at college. 500+ folks, lot of sessions.",
+        "taught git, dsa, and hosted hackathons that were more fun than exams (obviously)."
       ]
     }
   ],
@@ -100,49 +105,28 @@ const portfolioData: PortfolioData = {
   projects: [
     {
       title: "Git Chat",
-      description: "RAG-based Q&A with GitHub repositories",
-      githubUrl: "https://github.com/kanaktanwar/git-chat",
-      asciiArt: `
-    ____  _  _____  ____  _   _    _  _____ 
-   / ___|(_)(___ _)/  _ \\| | | |  / \\(___ _)
-  | |  _ | |  / / | / \\|| |_| | / _ \\ / / 
-  | |_| || | / /  | |-||| |_| |/ ___ \\ / / 
-   \\____||_|/_/   |_| |_|\\___//_/   \\_/_/  
-      `
+      description: "ask anything about a github repo — powered by langchain & weaviate. it's like chatgpt but repo-smart.",
+      githubUrl: "https://github.com/kanakOS01/git-chat",
+      techStack: ["weaviate", "streamlit", "langchain"]
     },
     {
       title: "Social Media API",
-      description: "FastAPI CRUD ops with Postgres and CI/CD",
-      githubUrl: "https://github.com/kanaktanwar/social-api",
-      asciiArt: `
-     ____ ___   ____ ____ ____ ____ _      ____ ____ ____ 
-    (  __/ __) /  __/  _ (_  _/ ___/ \\  /|(  __/  _ \\_  _)
-     ) _(\\__ \\ |  \\/| / \\| )( \\___ \\ |\\/| |  _|| / \\| )( 
-    (____(___/ \\____\\_|\\_|(__/\\____/_|  |_|____\\_|\\_|(__)
-      `
+      description: "api for a social app. fastapi + postgres, with CI/CD, docker, tests.",
+      githubUrl: "https://github.com/kanakOS01/social-media-fastapi",
+      techStack: ["fastapi", "postgres", "alembic", "pytest", "docker", "github actions"]
     },
     {
       title: "Movie Recommender",
-      description: "Content based Recommendation System",
-      githubUrl: "https://github.com/kanaktanwar/movie-recommender",
-      asciiArt: `
-    /\\/\\  /\\___/\\  /\\ /\\  /\\_/\\___
-   /    \\/ / _ \\ \\/ // \\/ _ \\/\\__\\
-  / /\\/\\ \\ \\_/ /\\  _/ / / \\_/ / /__
-  \\/    \\/\\___/  \\/ \\/\\/\\___/\\/___/
-      `
+      description: "a simple content based movie recommender system.",
+      githubUrl: "https://github.com/kanakOS01/movie-recommender-system",
+      techStack: ["streamlit", "numpy", "pandas", "sklearn"]
     },
     {
-      title: "House Price Prediction",
-      description: "ML model with Flask and AWS EC2",
-      githubUrl: "https://github.com/kanaktanwar/house-price",
-      asciiArt: `
-    _   _  _____  _   _  ____  _____ 
-   | | | |/  __/ | | | |/ ___)/  __/ 
-   | |_| || |  _ | | | |\\___ \\|  \\   
-   |  _  || |_| || |_| |/____/|  /_  
-   |_| |_|\\____/ \\___/(\\____/\\____\\ 
-      `
+      title: "ASCII Forge",
+      description: "cli tool that turns images into ascii art. super fun. super geeky.",
+      githubUrl: "https://github.com/kanakOS01/ascii-forge",
+      techStack: ["python", "click"],
+      liveUrl: "https://pypi.org/project/ascii-forge"
     }
   ]
 };

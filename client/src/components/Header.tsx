@@ -8,7 +8,7 @@ const Header = () => {
   const { name, titles, socials, resumeUrl } = portfolioData;
   
   return (
-    <header className="container mx-auto px-4 py-6">
+    <header className="w-full px-4 py-6">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="mb-4 md:mb-0 text-center md:text-left">
           <h1 className="text-3xl font-bold text-primary glow">
@@ -89,11 +89,11 @@ const Header = () => {
       <div className="mt-6 flex justify-center md:justify-start">
         <Button 
           variant="outline" 
-          className="border-primary text-primary hover:bg-primary hover:text-background transition-colors"
+          className="border-primary/100 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300"
           asChild
         >
           <a href={resumeUrl} download>
-            Resume <span className="ml-1">↓</span>
+            Resume <span className="ml-1">➜</span>
           </a>
         </Button>
       </div>

@@ -8,31 +8,32 @@ interface TypewriterEffectProps {
 const TypewriterEffect = ({ text, typingSpeed = 100 }: TypewriterEffectProps) => {
   const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+  const charIndexRef = useRef(0);
   const mounted = useRef(false);
 
   useEffect(() => {
     mounted.current = true;
-    let charIndex = 0;
+    charIndexRef.current = 0;
+    setDisplayText("");
+    setIsTyping(true);
     
-    if (isTyping) {
-      const typeInterval = setInterval(() => {
-        if (!mounted.current) return;
-        
-        if (charIndex < text.length) {
-          setDisplayText(prev => prev + text.charAt(charIndex));
-          charIndex++;
-        } else {
-          clearInterval(typeInterval);
-          setIsTyping(false);
-        }
-      }, typingSpeed);
+    const typeInterval = setInterval(() => {
+      if (!mounted.current) return;
       
-      return () => {
+      if (charIndexRef.current < text.length) {
+        setDisplayText(text.substring(0, charIndexRef.current + 1));
+        charIndexRef.current++;
+      } else {
         clearInterval(typeInterval);
-        mounted.current = false;
-      };
-    }
-  }, [text, typingSpeed, isTyping]);
+        setIsTyping(false);
+      }
+    }, typingSpeed);
+    
+    return () => {
+      clearInterval(typeInterval);
+      mounted.current = false;
+    };
+  }, [text, typingSpeed]);
 
   return (
     <span className={isTyping ? "typewriter" : ""}>

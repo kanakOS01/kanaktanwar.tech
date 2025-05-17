@@ -4,17 +4,17 @@ const Footer = () => {
   const { name } = portfolioData;
   
   const asciiArt = `
-   _________  ____  __._____________________ ____ 
-  /   _____/ |    |/ _|\\_   _____/\\______   \\    |
-  \\_____  \\  |      <   |    __)_  |       _/    |
-  /        \\ |    |  \\  |        \\ |    |   \\    |___
- /_______  / |____|__ \\/_______  / |____|_  /_______ \\
-         \\/          \\/        \\/         \\/        \\/`;
+___________.__             ___________           .___
+\\__    ___/|  |__   ____   \\_   _____/ ____    __| _/
+  |    |   |  |  \\_/ __ \\   |    __)_ /    \\  / __ | 
+  |    |   |   Y  \\  ___/   |        \\   |  \\/ /_/ | 
+  |____|   |___|  /\\___  > /_______  /___|  /\\____ | 
+                \\/     \\/          \\/     \\/      \\/`;
 
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="container mx-auto px-4 py-8 mt-8 border-t border-border">
+    <footer className="w-full px-4 py-8 mt-8 border-t border-border">
       <div className="text-center">
         <div className="ascii-container text-primary text-center mx-auto">
           <pre>{asciiArt}</pre>
