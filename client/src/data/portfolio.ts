@@ -59,6 +59,17 @@ const portfolioData: PortfolioData = {
   resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
   experiences: [
     {
+      title: "backend dev intern",
+      company: "vetic",
+      location: "gurgaon, india",
+      period: "apr 2025 to present",
+      responsibilities: [
+        "built an extension to suggest personalized messages to prospective leads on linkedin.",
+        "made an internal tool to allow QA with various resumes with langchain + llms.",
+        "scraped various websites using selenium and bs4 to provide client leads."
+      ]
+    },
+    {
       title: "ai intern",
       company: "mentorpal.ai",
       location: "remote",
@@ -87,7 +98,7 @@ const portfolioData: PortfolioData = {
     },
     {
       category: "frameworks",
-      items: "fastapi, flask, langchain, bs4, selenium"
+      items: "fastapi, flask, django, langchain, bs4, selenium"
     },
     {
       category: "ai/ml",
@@ -95,11 +106,11 @@ const portfolioData: PortfolioData = {
     },
     {
       category: "database & orm",
-      items: "postgresql, sql alchemy, alembic"
+      items: "postgresql, mongodb, sqlalchemy, beanie, alembic"
     },
     {
       category: "tools",
-      items: "github actions, aws ec2, digitalocean droplet, docker"
+      items: "github actions, aws ec2, digitalocean droplet, docker, redis"
     }
   ],
   projects: [
