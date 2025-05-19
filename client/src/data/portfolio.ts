@@ -60,7 +60,7 @@ const portfolioData: PortfolioData = {
   experiences: [
     {
       title: "ai intern",
-      company: "Mentorpal.ai",
+      company: "mentorpal.ai",
       location: "remote",
       period: "jan 2024 to jul 2024",
       responsibilities: [
@@ -71,7 +71,7 @@ const portfolioData: PortfolioData = {
     },
     {
       title: "club lead",
-      company: "Deviators Club",
+      company: "deviators club",
       location: "hybrid",
       period: "feb 2024 to feb 2025",
       responsibilities: [
@@ -82,47 +82,47 @@ const portfolioData: PortfolioData = {
   ],
   skills: [
     {
-      category: "Languages",
-      items: "Python, Bash, SQL, JavaScript"
+      category: "languages",
+      items: "python, bash, sql, javascript"
     },
     {
-      category: "Frameworks",
-      items: "FastAPI, Flask, LangChain, BS4, Selenium"
+      category: "frameworks",
+      items: "fastapi, flask, langchain, bs4, selenium"
     },
     {
-      category: "AI/ML",
-      items: "NumPy, Pandas, Matplotlib, Scikit-Learn, Transformers"
+      category: "ai/ml",
+      items: "numpy, pandas, matplotlib, scikit-learn, transformers"
     },
     {
-      category: "Database & ORM",
-      items: "PostgreSQL, SQL Alchemy, Alembic"
+      category: "database & orm",
+      items: "postgresql, sql alchemy, alembic"
     },
     {
-      category: "Tools",
-      items: "GitHub Actions, AWS EC2, DigitalOcean Droplet, Docker"
+      category: "tools",
+      items: "github actions, aws ec2, digitalocean droplet, docker"
     }
   ],
   projects: [
     {
-      title: "Git Chat",
+      title: "git chat",
       description: "ask anything about a github repo — powered by langchain & weaviate. it's like chatgpt but repo-smart.",
       githubUrl: "https://github.com/kanakOS01/git-chat",
       techStack: ["weaviate", "streamlit", "langchain"]
     },
     {
-      title: "Social Media API",
+      title: "social media api",
       description: "api for a social app. fastapi + postgres, with CI/CD, docker, tests.",
       githubUrl: "https://github.com/kanakOS01/social-media-fastapi",
       techStack: ["fastapi", "postgres", "alembic", "pytest", "docker", "github actions"]
     },
     {
-      title: "Movie Recommender",
+      title: "movie recommender",
       description: "a simple content based movie recommender system.",
       githubUrl: "https://github.com/kanakOS01/movie-recommender-system",
       techStack: ["streamlit", "numpy", "pandas", "sklearn"]
     },
     {
-      title: "ASCII Forge",
+      title: "ascii forge",
       description: "cli tool that turns images into ascii art. super fun. super geeky.",
       githubUrl: "https://github.com/kanakOS01/ascii-forge",
       techStack: ["python", "click"],

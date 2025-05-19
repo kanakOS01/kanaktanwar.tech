@@ -8,7 +8,7 @@ const Projects = () => {
   return (
     <section className="w-full px-4 py-8">
       <h2 className="text-xl font-semibold mb-6">
-        <span className="text-primary">■</span> Projects
+        <span className="text-primary">■</span> projects
       </h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

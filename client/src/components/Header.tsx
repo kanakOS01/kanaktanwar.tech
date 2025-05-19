@@ -93,7 +93,7 @@ const Header = () => {
           asChild
         >
           <a href={resumeUrl} download>
-            Resume <span className="ml-1">➜</span>
+            resume <span className="ml-1">➜</span>
           </a>
         </Button>
       </div>
