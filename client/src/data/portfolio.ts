@@ -64,9 +64,8 @@ const portfolioData: PortfolioData = {
       location: "gurgaon, india",
       period: "apr 2025 to present",
       responsibilities: [
-        "built an extension to suggest personalized messages to prospective leads on linkedin.",
-        "made an internal tool to allow QA with various resumes with langchain + llms.",
-        "scraped various websites using selenium and bs4 to provide client leads."
+        "implemented a task scheduler using redis for timed job execution as an onboarding task.",
+        "solved various backend tasks using python frameworks like fastapi and django."
       ]
     },
     {
