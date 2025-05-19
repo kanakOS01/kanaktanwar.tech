@@ -1,4 +1,2 @@
-__pycache__/
-.python-version
-venv/
 .env
+node_modules/
