@@ -14,7 +14,7 @@ ___________.__             ___________           .___
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="w-full px-4 py-4 border-t border-primary/100">
+    <footer className="w-full px-4 py-4 border-t border-primary/50">
       <div className="text-center">
         <div className="ascii-container text-primary text-center mx-auto">
           <pre>{asciiArt}</pre>

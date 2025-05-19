@@ -13,7 +13,7 @@ const Projects = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project, index) => (
-          <div key={index} className="p-3 border border-dashed border-primary/100 relative flex flex-col h-full hover-neon transition-all duration-300 group">
+          <div key={index} className="p-3 border border-dashed border-primary/70 relative flex flex-col h-full hover-neon transition-all duration-300 group">
             <div className="absolute top-[-5px] left-[10px] bg-background text-primary px-1 text-sm glow group-hover:bg-background">{project.title}</div>
             <p className="text-sm text-gray-300 mt-2 mb-3">{project.description}</p>
             
