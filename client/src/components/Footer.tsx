@@ -14,15 +14,15 @@ ___________.__             ___________           .___
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="w-full px-4 py-8 mt-8 border-t border-border">
+    <footer className="w-full px-4 py-4 border-t border-primary/100">
       <div className="text-center">
         <div className="ascii-container text-primary text-center mx-auto">
           <pre>{asciiArt}</pre>
         </div>
         <p className="text-sm mt-4">
-          <span className="text-primary">&copy;</span> {currentYear} {name}. Built with 
-          <span className="text-primary"> ❤</span> and a lot of 
-          <span className="text-primary"> coffee</span>.
+          <span className="text-primary">&copy;</span> {currentYear} {name}. built with 
+          <span className="text-primary"> ❤</span> and a ton of 
+          <span className="text-primary"> ai</span>.
         </p>
       </div>
     </footer>

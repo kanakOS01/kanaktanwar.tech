@@ -49,7 +49,7 @@ const portfolioData: PortfolioData = {
   ],
   socials: {
     linkedin: "https://linkedin.com/in/kanak-tanwar",
-    github: "https://github.com/kanak0S01",
+    github: "https://github.com/kanakOS01",
     twitter: "https://x.com/kanaktwts",
     email: "mailto:kanaktanwarpro@gmail.com",
     devto: "https://dev.to/kanakos01",

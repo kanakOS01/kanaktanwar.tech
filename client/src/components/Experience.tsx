@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <section className="w-full px-4 py-8">
       <h2 className="text-xl font-semibold mb-6">
-        <span className="text-primary">■</span> Experience
+        <span className="text-primary">■</span> experience
       </h2>
       
       <div className="space-y-6">

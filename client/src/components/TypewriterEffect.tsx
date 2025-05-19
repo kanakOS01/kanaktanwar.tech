@@ -17,22 +17,22 @@ const TypewriterEffect = ({ text, typingSpeed = 100 }: TypewriterEffectProps) =>
     setDisplayText("");
     setIsTyping(true);
     
-    const typeInterval = setInterval(() => {
-      if (!mounted.current) return;
-      
+      const typeInterval = setInterval(() => {
+        if (!mounted.current) return;
+        
       if (charIndexRef.current < text.length) {
         setDisplayText(text.substring(0, charIndexRef.current + 1));
         charIndexRef.current++;
-      } else {
+        } else {
+          clearInterval(typeInterval);
+          setIsTyping(false);
+        }
+      }, typingSpeed);
+      
+      return () => {
         clearInterval(typeInterval);
-        setIsTyping(false);
-      }
-    }, typingSpeed);
-    
-    return () => {
-      clearInterval(typeInterval);
-      mounted.current = false;
-    };
+        mounted.current = false;
+      };
   }, [text, typingSpeed]);
 
   return (
