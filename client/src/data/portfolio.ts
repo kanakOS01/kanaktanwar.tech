@@ -65,7 +65,7 @@ const portfolioData: PortfolioData = {
       period: "apr 2025 to present",
       responsibilities: [
         "implemented a task scheduler using redis for timed job execution as an onboarding task.",
-        "solved various backend tasks using python frameworks like fastapi and django."
+        "solved various backend tasks using fastapi and django."
       ]
     },
     {
