@@ -78,6 +78,8 @@ const Header = () => {
           </a>
           <a 
             href={socials.email} 
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-gray-300 hover:text-primary hover-glow transition-colors mx-1"
             aria-label="Email"
           >
@@ -92,7 +94,7 @@ const Header = () => {
           className="border-primary/100 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300"
           asChild
         >
-          <a href={resumeUrl} download>
+          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
             resume <span className="ml-1">➜</span>
           </a>
         </Button>
