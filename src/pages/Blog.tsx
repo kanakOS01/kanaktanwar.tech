@@ -90,7 +90,7 @@ const Blog = () => {
 
         <div className="px-4 py-8">
           <div className="flex items-center justify-between mb-8">
-            <h1 className="text-3xl font-bold text-primary glow">blog posts</h1>
+            <h1 className="text-3xl font-bold text-primary glow">blogs</h1>
             <Button
               variant="outline"
               size="sm"
