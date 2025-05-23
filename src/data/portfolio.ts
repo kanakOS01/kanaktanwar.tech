@@ -52,7 +52,6 @@ const portfolioData: PortfolioData = {
     github: "https://github.com/kanakOS01",
     twitter: "https://x.com/kanaktwts",
     email: "mailto:kanaktanwarpro@gmail.com",
-    devto: "https://dev.to/kanakos01",
     codechef: "https://www.codechef.com/users/kanaktanwarpro",
     leetcode: "https://leetcode.com/u/kanaktanwarpro"
   },

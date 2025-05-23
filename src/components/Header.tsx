@@ -1,6 +1,7 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Twitter, Mail, Code, BookOpen } from "lucide-react";
-import { SiDevdotto, SiCodechef, SiLeetcode } from "react-icons/si";
+import { Github, Linkedin, Twitter, Mail, BookOpen, Heart, FileText } from "lucide-react";
+import { SiCodechef, SiLeetcode } from "react-icons/si";
 import TypewriterEffect from "./TypewriterEffect";
 import portfolioData from "@/data/portfolio";
 
@@ -50,15 +51,6 @@ const Header = () => {
             <Twitter className="w-5 h-5" />
           </a>
           <a 
-            href={socials.devto} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-300 hover:text-primary hover-glow transition-colors mx-1"
-            aria-label="Dev.to Profile"
-          >
-            <SiDevdotto className="w-5 h-5" />
-          </a>
-          <a 
             href={socials.codechef} 
             target="_blank" 
             rel="noopener noreferrer"
@@ -88,14 +80,38 @@ const Header = () => {
         </div>
       </div>
       
-      <div className="mt-6 flex justify-center md:justify-start">
+      <div className="mt-6 flex justify-center md:justify-start space-x-3">
         <Button 
           variant="outline" 
-          className="border-primary/100 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300"
+          size="sm"
+          className="border-primary/70 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300 h-8 px-3"
           asChild
         >
           <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-            resume <span className="ml-1">➜</span>
+            <FileText className="w-4 h-4 " />
+            resume
+          </a>
+        </Button>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-primary/70 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300 h-8 px-3"
+          asChild
+        >
+          <a href="/blog" rel="noopener noreferrer">
+            <BookOpen className="w-4 h-4 " />
+            blogs
+          </a>
+        </Button>
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-primary/70 text-primary hover:bg-primary/30 hover:border-primary hover:text-primary hover-glow transition-all duration-300 h-8 px-3"
+          asChild
+        >
+          <a href="https://github.com/sponsors/kanakOS01" target="_blank" rel="noopener noreferrer">
+            <Heart className="w-4 h-4 " />
+            sponsor
           </a>
         </Button>
       </div>
