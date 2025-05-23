@@ -156,16 +156,16 @@ const Blog = () => {
                         </span>
                       ))}
                     </div>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                      <span>•</span>
                       <span className="text-primary">
                         {format(new Date(article.published_at), "MMM d, yyyy").toLowerCase()}
                       </span>
                       <span>•</span>
-                      <span>🕒 {article.reading_time_minutes} min read</span>
+                      <span>🕒 {article.reading_time_minutes} min</span>
                       <span>•</span>
                       <span>❤️ {article.public_reactions_count}</span>
                       <span>•</span>
-                      <span>💬 {article.comments_count}</span>
                     </div>
                   </div>
                 </div>
