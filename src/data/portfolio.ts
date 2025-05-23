@@ -109,7 +109,7 @@ const portfolioData: PortfolioData = {
     },
     {
       category: "tools",
-      items: "github actions, aws ec2, digitalocean droplet, docker, redis"
+      items: "github actions, aws ec2, digitalocean droplet, docker, redis, fabric"
     }
   ],
   projects: [
