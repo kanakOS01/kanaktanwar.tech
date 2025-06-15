@@ -91,7 +91,26 @@
   }
   
   .glow {
-    text-shadow: 0 0 3px hsl(var(--primary)/0.5), 0 0 5px hsl(var(--primary)/0.2), 0 0 8px hsl(var(--primary)/0.1);
+    text-shadow: 0 0 5px hsl(var(--primary)/0.7),
+                 0 0 10px hsl(var(--primary)/0.5),
+                 0 0 15px hsl(var(--primary)/0.3),
+                 0 0 20px hsl(var(--primary)/0.2);
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow-pulse {
+    from {
+      text-shadow: 0 0 5px hsl(var(--primary)/0.7),
+                   0 0 10px hsl(var(--primary)/0.5),
+                   0 0 15px hsl(var(--primary)/0.3),
+                   0 0 20px hsl(var(--primary)/0.2);
+    }
+    to {
+      text-shadow: 0 0 10px hsl(var(--primary)/0.8),
+                   0 0 20px hsl(var(--primary)/0.6),
+                   0 0 30px hsl(var(--primary)/0.4),
+                   0 0 40px hsl(var(--primary)/0.3);
+    }
   }
   
   .hover-glow:hover {
