@@ -91,21 +91,21 @@
   }
   
   .glow {
-    text-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.7), 0 0 25px hsl(var(--primary)/0.5);
+    text-shadow: 0 0 3px hsl(var(--primary)/0.5), 0 0 5px hsl(var(--primary)/0.2), 0 0 8px hsl(var(--primary)/0.1);
   }
   
   .hover-glow:hover {
-    text-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.7), 0 0 25px hsl(var(--primary)/0.5);
+    text-shadow: 0 0 3px hsl(var(--primary)/0.5), 0 0 5px hsl(var(--primary)/0.2), 0 0 8px hsl(var(--primary)/0.1);
     transition: all 0.3s ease;
   }
   
   .neon-shadow {
-    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.7);
+    box-shadow: 0 0 3px hsl(var(--primary)/0.5), 0 0 5px hsl(var(--primary)/0.2);
   }
   
   .hover-neon:hover {
-    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 15px hsl(var(--primary)/0.7), 0 0 25px hsl(var(--primary)/0.5);
-    border-color: hsl(var(--primary));
+    box-shadow: 0 0 3px hsl(var(--primary)/0.5), 0 0 5px hsl(var(--primary)/0.2), 0 0 8px hsl(var(--primary)/0.1);
+    border-color: hsl(var(--primary)/0.5);
     transition: all 0.3s ease;
   }
   
@@ -118,7 +118,7 @@
   
   .ascii-box {
     position: relative;
-    border: 1px dashed hsl(var(--primary));
+    border: 1px dashed hsl(var(--primary)/0.3);
     padding: 1.5rem;
     margin-bottom: 2rem;
   }
@@ -129,7 +129,7 @@
     top: -10px;
     left: -10px;
     background-color: hsl(var(--background));
-    color: hsl(var(--primary));
+    color: hsl(var(--primary)/0.5);
     padding: 0 5px;
     font-size: 14px;
   }
@@ -140,7 +140,7 @@
     bottom: -10px;
     right: -10px;
     background-color: hsl(var(--background));
-    color: hsl(var(--primary));
+    color: hsl(var(--primary)/0.5);
     padding: 0 5px;
     font-size: 14px;
   }
@@ -150,7 +150,7 @@
     top: -10px;
     right: -10px;
     background-color: hsl(var(--background));
-    color: hsl(var(--primary));
+    color: hsl(var(--primary)/0.5);
     padding: 0 5px;
     content: "+";
   }
@@ -160,7 +160,7 @@
     bottom: -10px;
     left: -10px;
     background-color: hsl(var(--background));
-    color: hsl(var(--primary));
+    color: hsl(var(--primary)/0.5);
     padding: 0 5px;
     content: "+";
   }

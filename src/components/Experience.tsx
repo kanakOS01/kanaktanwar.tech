@@ -12,8 +12,8 @@ const Experience = () => {
       
       <div className="space-y-6">
         {experiences.map((exp, index) => (
-          <div key={index} className="p-4 border border-dashed border-primary/70 relative hover-neon transition-all duration-300 group">
-            <div className="absolute top-[-5px] left-[10px] bg-background text-primary text-sm px-1 glow group-hover:bg-background">{exp.title}</div>
+          <div key={index} className="p-4 border border-dashed border-primary/30 relative hover-neon transition-all duration-300 group">
+            <div className="absolute top-[-5px] left-[10px] bg-background text-primary/70 text-sm px-1 glow group-hover:bg-background">{exp.title}</div>
             <div className="flex flex-col justify-between mt-2">
               <div className="flex justify-between items-center mb-1">
                 <p className="text-sm text-gray-300 font-semibold">{exp.company}</p>

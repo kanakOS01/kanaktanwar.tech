@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
+import { OnekoCat } from "@/components/OnekoCat";
 
 function Router() {
   return (
@@ -22,6 +23,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
+        <OnekoCat />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>

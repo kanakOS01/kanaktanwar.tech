@@ -12,10 +12,10 @@ const Skills = () => {
       <div className="space-y-6">
         {skills.map((skill, index) => (
           <div key={index} className="relative transition-all duration-300 hover:pl-2">
-            <h3 className="text-primary text-sm font-semibold mb-2 border-b border-primary/50 pb-1">
-              <span className="bg-primary/10 px-2 py-0.5 rounded hover-glow inline-block">{skill.category}</span>
+            <h3 className="text-primary/70 text-sm font-semibold mb-2 border-b border-primary/20 pb-1">
+              <span className="bg-primary/5 px-2 py-0.5 rounded hover-glow inline-block">{skill.category}</span>
             </h3>
-            <p className="text-sm pl-2 border-l-2 border-primary/30 hover:border-primary transition-all duration-300">{skill.items}</p>
+            <p className="text-sm pl-2 border-l-2 border-primary/20 hover:border-primary/30 transition-all duration-300">{skill.items}</p>
           </div>
         ))}
       </div>
