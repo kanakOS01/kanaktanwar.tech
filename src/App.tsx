@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
 import { OnekoCat } from "@/components/OnekoCat";
+import { CursorFollower } from "@/components/CursorFollower";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <OnekoCat />
+        <CursorFollower />
         <Router />
       </TooltipProvider>
     </QueryClientProvider>
