@@ -58,15 +58,15 @@ const portfolioData: PortfolioData = {
   resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
   experiences: [
     {
-      "title": "Backend Developer Intern",
-      "company": "Vetic",
-      "location": "Gurgaon, India",
-      "period": "April 2025 to Present",
+      "title": "backend developer intern",
+      "company": "vetic",
+      "location": "gurgaon, india",
+      "period": "april 2025 to present",
       "responsibilities": [
-        "Optimized API performance by adding indexes, improving SQL queries, and enabling connection pooling—reduced response time by up to 90%.",
-        "Built and launched an OCR feature to extract pet vaccination data from uploaded cards, reducing manual data entry and operational overhead for the ops team.",
-        "Refactored parts of the codebase to eliminate N+1 queries and improve readability and maintainability.",
-        "Fixed reported bugs and implemented minor backend features across multiple services in FastAPI and Django.",
+        "optimized api performance by adding indexes, improving sql queries, and enabling connection pooling—reduced response time by up to 90%.",
+        "built and launched an ocr feature to extract pet vaccination data from uploaded cards, reducing manual data entry and operational overhead for the ops team.",
+        "refactored parts of the codebase to eliminate n+1 queries and improve readability and maintainability.",
+        "fixed reported bugs and implemented minor backend features across multiple services in fastapi and django.",
       ]
     },
     {
