@@ -61,7 +61,7 @@ const portfolioData: PortfolioData = {
       "title": "backend developer intern",
       "company": "vetic",
       "location": "gurgaon, india",
-      "period": "april 2025 to present",
+      "period": "apr 2025 to present",
       "responsibilities": [
         "optimized api performance by adding indexes, improving sql queries, and enabling connection pooling—reduced response time by up to 90%.",
         "built and launched an ocr feature to extract pet vaccination data from uploaded cards, reducing manual data entry and operational overhead for the ops team.",
@@ -73,7 +73,7 @@ const portfolioData: PortfolioData = {
       title: "ai intern",
       company: "mentorpal.ai",
       location: "remote",
-      period: "jan 2024 to jul 2024",
+      period: "jun 2024 to jul 2024",
       responsibilities: [
         "built an extension to suggest personalized messages to prospective leads on linkedin.",
         "made an internal tool to allow QA with various resumes with langchain + llms.",
