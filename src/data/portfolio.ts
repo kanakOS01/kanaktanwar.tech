@@ -67,6 +67,7 @@ const portfolioData: PortfolioData = {
         "built and launched an ocr feature to extract pet vaccination data from uploaded cards, reducing manual data entry and operational overhead for the ops team.",
         "refactored parts of the codebase to eliminate n+1 queries and improve readability and maintainability.",
         "fixed reported bugs and implemented minor backend features across multiple services in fastapi and django.",
+        "implemented razorpay pos and payment link system for automated account closure, improving financial reconciliation accuracy."
       ]
     },
     {
