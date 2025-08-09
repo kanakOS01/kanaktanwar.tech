@@ -117,9 +117,9 @@ const portfolioData: PortfolioData = {
   projects: [
     {
       title: "git chat",
-      description: "ask anything about a github repo — powered by langchain & weaviate. it's like chatgpt but repo-smart.",
-      githubUrl: "https://github.com/kanakOS01/git-chat",
-      techStack: ["weaviate", "streamlit", "langchain"]
+      description: "ask anything about a github repo — powered by streamlit, langchain & weaviate. it's like chatgpt but repo-smart.",
+      githubUrl: "https://github.com/kanakOS01/gitchat",
+      techStack: ["weaviate", "streamlit", "langchain", "mongodb"]
     },
     {
       title: "social media api",
