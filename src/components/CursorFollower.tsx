@@ -25,7 +25,7 @@ export const CursorFollower = () => {
 
     const dotSize = 8; // Smaller dot size
     const lag = 8; // Slightly faster movement
-    const color = "#7B5EFA"; // Using the website's primary neon blue-purple color
+    const color = "#60A5FA"; // Using the website's soft blue theme color
 
     const onMouseMove = (e: MouseEvent) => {
       cursorRef.current = { x: e.clientX, y: e.clientY };
