@@ -63,11 +63,9 @@ const portfolioData: PortfolioData = {
       "location": "gurgaon, india",
       "period": "apr 2025 to present",
       "responsibilities": [
-        "optimized api performance by adding indexes, improving sql queries, and enabling connection pooling—reduced response time by up to 90%.",
-        "built and launched an ocr feature to extract pet vaccination data from uploaded cards, reducing manual data entry and operational overhead for the ops team.",
-        "refactored parts of the codebase to eliminate n+1 queries and improve readability and maintainability.",
-        "fixed reported bugs and implemented minor backend features across multiple services in fastapi and django.",
-        "implemented razorpay pos and payment link system for automated account closure, improving financial reconciliation accuracy."
+        "worked on backend systems for high-scale clinic operations, focusing on performance, reliability, and financial workflows.",
+        "built and optimized APIs, payment systems, and internal tooling using fastapi, django, postgres, redis, and async processing with queues.",
+        "also explored llm-powered features like ocr pipelines for structured data extraction."
       ]
     },
     {
@@ -76,9 +74,8 @@ const portfolioData: PortfolioData = {
       location: "remote",
       period: "jun 2024 to jul 2024",
       responsibilities: [
-        "built an extension to suggest personalized messages to prospective leads on linkedin.",
-        "made an internal tool to allow QA with various resumes with langchain + llms.",
-        "scraped various websites using selenium and bs4 to provide client leads."
+        "worked on applied llm use-cases including lead generation, personalization, and internal tooling.",
+        "built browser automation pipelines and lightweight ai tools using langchain, selenium, and python to improve workflow efficiency."
       ]
     },
     {
@@ -94,27 +91,28 @@ const portfolioData: PortfolioData = {
   ],
   skills: [
     {
-      category: "languages",
-      items: "python, bash, sql, javascript"
+      category: "languages & frameworks",
+      items: "python, go, fastapi, django, flask, gin"
     },
     {
-      category: "frameworks",
-      items: "fastapi, flask, django, langchain, bs4, selenium"
+      category: "databases & orm",
+      items: "postgresql, mysql, mongodb, redis, sqlalchemy, beanie, alembic, golang-migrate"
     },
     {
-      category: "ai/ml",
-      items: "numpy, pandas, matplotlib, scikit-learn, transformers"
+      category: "devops & tools",
+      items: "git, linux, docker, aws, grafana, loki, prometheus"
     },
     {
-      category: "database & orm",
-      items: "postgresql, mongodb, sqlalchemy, beanie, alembic"
-    },
-    {
-      category: "tools",
-      items: "github actions, aws ec2, digitalocean droplet, docker, redis, fabric"
+      category: "misc",
+      items: "rest apis, rabbitmq, cron jobs"
     }
   ],
   projects: [
+    {
+      title: "pair programmer (pp)",
+      description: "a terminal-based ai coding assistant that can read, search, and modify codebases using tool-driven workflows. designed with an agentic architecture, rich tui, and support for multi-step edits across files.",
+      techStack: ["python", "typer", "rich", "open router"]
+    },
     {
       title: "git chat",
       description: "ask anything about a github repo — powered by streamlit, langchain & weaviate. it's like chatgpt but repo-smart.",
