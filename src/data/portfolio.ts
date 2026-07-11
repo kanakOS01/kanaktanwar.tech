@@ -57,7 +57,7 @@ const portfolioData: PortfolioData = {
   resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
   experiences: [
     {
-      title: "software development engineer i",
+      title: "sde 1",
       company: "vetic",
       location: "gurgaon, india",
       period: "jul 2026 to present",
@@ -67,7 +67,7 @@ const portfolioData: PortfolioData = {
       ]
     },
     {
-      title: "software development intern",
+      title: "sde intern",
       company: "vetic",
       location: "gurgaon, india",
       period: "apr 2025 to jun 2026",
