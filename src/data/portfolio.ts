@@ -45,7 +45,6 @@ const portfolioData: PortfolioData = {
     "heyy, i'm kanak, a backend dev and ai engineer. i like open source.",
     "my most active social is x/twitter, you can find me there.",
     "check my github to know more about me. i also write some blogs on dev.to.",
-    "ohh, and this site is completely ai generated ;))"
   ],
   socials: {
     linkedin: "https://linkedin.com/in/kanak-tanwar",
