@@ -57,14 +57,24 @@ const portfolioData: PortfolioData = {
   resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
   experiences: [
     {
-      "title": "backend developer intern",
-      "company": "vetic",
-      "location": "gurgaon, india",
-      "period": "apr 2025 to present",
-      "responsibilities": [
-        "worked on backend systems for high-scale clinic operations, focusing on performance, reliability, and financial workflows.",
-        "built and optimized APIs, payment systems, and internal tooling using fastapi, django, postgres, redis, and async processing with queues.",
-        "also explored llm-powered features like ocr pipelines for structured data extraction."
+      title: "software development engineer i",
+      company: "vetic",
+      location: "gurgaon, india",
+      period: "jul 2026 to present",
+      responsibilities: [
+        "developing and maintaining pyvetic, a shared backend platform library providing authentication, database, queuing, observability, and common infrastructure for vetic's backend applications.",
+        "engineered centralized authentication in pyvetic and migrated 15+ backend services to it, standardizing access control and eliminating duplicated implementations."
+      ]
+    },
+    {
+      title: "software development intern",
+      company: "vetic",
+      location: "gurgaon, india",
+      period: "apr 2025 to jun 2026",
+      responsibilities: [
+        "built a config-driven dsl rule engine for appointment exemptions and architected an automated clinic day-closing reconciliation system.",
+        "scaled payment processing by integrating pine labs and razorpay, and designed a centralized cash ledger service for multi-clinic operations.",
+        "developed an llm-assisted ocr pipeline for structured vaccination record extraction, using redis, mongodb transactions, and rabbitmq."
       ]
     },
     {
@@ -73,8 +83,8 @@ const portfolioData: PortfolioData = {
       location: "remote",
       period: "jun 2024 to jul 2024",
       responsibilities: [
-        "worked on applied llm use-cases including lead generation, personalization, and internal tooling.",
-        "built browser automation pipelines and lightweight ai tools using langchain, selenium, and python to improve workflow efficiency."
+        "developed a chrome extension generating personalized linkedin outreach messages using llms.",
+        "built internal resume qa tool using langchain and llms, boosting qa efficiency by 40%."
       ]
     },
     {
@@ -94,33 +104,34 @@ const portfolioData: PortfolioData = {
       items: "python, go, fastapi, django, flask, gin"
     },
     {
-      category: "databases & orm",
-      items: "postgresql, mysql, mongodb, redis, sqlalchemy, beanie, alembic, golang-migrate"
+      category: "databases",
+      items: "postgresql, mysql, mongodb, redis, elasticsearch"
     },
     {
-      category: "devops & tools",
-      items: "git, linux, docker, aws, grafana, loki, prometheus"
+      category: "infrastructure & devops",
+      items: "docker, aws, linux, git, grafana, loki, prometheus"
     },
     {
       category: "misc",
-      items: "rest apis, rabbitmq, cron jobs"
+      items: "rest apis, rabbitmq, llms, rag, mcp, agentic ai"
     }
   ],
   projects: [
     {
       title: "pair programmer (pp)",
-      description: "a terminal-based ai coding assistant that can read, search, and modify codebases using tool-driven workflows. designed with an agentic architecture, rich tui, and support for multi-step edits across files.",
-      techStack: ["python", "typer", "rich", "open router"]
+      description: "an agentic cli coding assistant with a rich tui for autonomous codebase exploration, reasoning, and modification using llms.",
+      githubUrl: "https://github.com/kanakOS01/pair-programmer",
+      techStack: ["python", "typer", "rich", "mcp", "agentic ai"]
     },
     {
       title: "git chat",
-      description: "ask anything about a github repo — powered by streamlit, langchain & weaviate. it's like chatgpt but repo-smart.",
+      description: "a rag-based chatbot for conversational question answering over public github repositories using langchain and weaviate.",
       githubUrl: "https://github.com/kanakOS01/gitchat",
-      techStack: ["weaviate", "streamlit", "langchain", "mongodb"]
+      techStack: ["fastapi", "weaviate", "mongodb", "langchain"]
     },
     {
       title: "social media api",
-      description: "api for a social app. fastapi + postgres, with CI/CD, docker, tests.",
+      description: "api for a social app. fastapi + postgres, with ci/cd, docker, tests.",
       githubUrl: "https://github.com/kanakOS01/social-media-fastapi",
       techStack: ["fastapi", "postgres", "alembic", "pytest", "docker", "github actions"]
     },

@@ -21,8 +21,7 @@ ___________.__             ___________           .___
         </div>
         <p className="text-sm mt-4">
           <span className="text-primary">&copy;</span> {currentYear} {name}. built with 
-          <span className="text-primary"> ❤</span> and a ton of 
-          <span className="text-primary"> ai</span>.
+          <span className="text-primary"> ❤</span>
         </p>
       </div>
     </footer>
