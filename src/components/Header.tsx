@@ -12,7 +12,7 @@ const Header = () => {
     <header className="w-full px-4 py-6">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="mb-4 md:mb-0 text-center md:text-left">
-          <h1 className="text-3xl font-bold text-primary glow">
+          <h1 className="text-3xl font-bold text-primary">
             <TypewriterEffect text={name} />
           </h1>
           <div className="text-sm mt-1 space-y-1">

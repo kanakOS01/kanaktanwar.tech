@@ -47,7 +47,7 @@ const Experience = () => {
         {groupedExperiences.map((group, index) => (
           <div key={index} className="p-4 border border-dashed border-primary/30 relative hover-neon transition-all duration-300 group">
             {/* Company name at the box top */}
-            <div className="absolute top-[-5px] left-[10px] bg-background text-primary/70 text-sm px-1 glow group-hover:bg-background">
+            <div className="absolute top-[-5px] left-[10px] bg-background text-primary/70 text-sm px-1 font-bold group-hover:bg-background group-hover:text-primary group-hover:glow-subtle transition-all duration-300">
               {group.company}
             </div>
             
@@ -76,7 +76,7 @@ const Experience = () => {
             {/* Subsequent Roles (with division lines) */}
             {group.roles.slice(1).map((role, rIdx) => (
               <div key={rIdx} className="mt-4">
-                <div className="border-t border-dashed border-primary/20 pt-4" />
+                <div className="border-t border-dashed border-primary/20 pt-4 group-hover:border-primary/50 group-hover:filter group-hover:drop-shadow-[0_0_2px_hsl(var(--primary)/0.5)] transition-all duration-300" />
                 
                 <div className="flex flex-col justify-between">
                   <div className="flex justify-between items-center mb-1">

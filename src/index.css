@@ -97,6 +97,11 @@
                  0 0 20px hsl(var(--primary)/0.2);
     animation: glow-pulse 2s ease-in-out infinite alternate;
   }
+
+  .glow-subtle {
+    text-shadow: 0 0 3px hsl(var(--primary)/0.5),
+                 0 0 6px hsl(var(--primary)/0.3);
+  }
   
   @keyframes glow-pulse {
     from {

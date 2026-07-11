@@ -14,7 +14,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <div key={index} className="p-3 border border-dashed border-primary/30 relative flex flex-col h-full hover-neon transition-all duration-300 group">
-            <div className="absolute top-[-5px] left-[10px] bg-background text-primary/70 px-1 text-sm glow group-hover:bg-background">{project.title}</div>
+            <div className="absolute top-[-5px] left-[10px] bg-background text-primary/70 px-1 text-sm font-bold group-hover:bg-background group-hover:text-primary group-hover:glow-subtle transition-all duration-300">{project.title}</div>
             <p className="text-sm text-gray-300 mt-2 mb-3">{project.description}</p>
             
             <div className="flex flex-wrap gap-2 my-4">
