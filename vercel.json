@@ -1,18 +1,12 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/resume.pdf",
-      "destination": "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
-      "permanent": false
-    }
-  ],
-  "rewrites": [
+      "destination": "https://kanakos01.github.io/kanakOS01/resume/resume.pdf"
+    },
     {
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "framework": "vite"
+  ]
 }
