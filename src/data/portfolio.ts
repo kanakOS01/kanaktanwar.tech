@@ -54,7 +54,7 @@ const portfolioData: PortfolioData = {
     codechef: "https://www.codechef.com/users/kanaktanwarpro",
     leetcode: "https://leetcode.com/u/kanaktanwarpro"
   },
-  resumeUrl: "https://kanakos01.github.io/kanakOS01/resume/resume.pdf",
+  resumeUrl: "https://www.kanaktanwar.tech/resume.pdf",
   experiences: [
     {
       title: "sde 1",
