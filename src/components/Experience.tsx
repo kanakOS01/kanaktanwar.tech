@@ -9,6 +9,7 @@ interface GroupedExperience {
     period: string;
     responsibilities: string[];
   }[];
+  stacked?: { title: string; period: string }[];
 }
 
 const Experience = () => {
@@ -17,6 +18,15 @@ const Experience = () => {
   // Group consecutive experiences by company
   const groupedExperiences: GroupedExperience[] = [];
   experiences.forEach((exp) => {
+    if (exp.roles) {
+      groupedExperiences.push({
+        company: exp.company,
+        location: exp.location,
+        roles: [{ title: exp.title, period: exp.period, responsibilities: exp.responsibilities }],
+        stacked: exp.roles,
+      });
+      return;
+    }
     const lastGroup = groupedExperiences[groupedExperiences.length - 1];
     if (lastGroup && lastGroup.company.toLowerCase() === exp.company.toLowerCase()) {
       lastGroup.roles.push({
@@ -52,19 +62,37 @@ const Experience = () => {
             </div>
             
             {/* First Role */}
-            <div className="flex flex-col justify-between mt-2">
-              <div className="flex justify-between items-center mb-1">
-                <span className="text-sm text-gray-300 font-semibold">{group.roles[0].title}</span>
-                <div className="flex items-center gap-1 text-sm text-gray-400">
+            {group.stacked ? (
+              <div className="flex flex-col mt-2">
+                <div className="flex items-center gap-1 text-sm text-gray-400 mb-1">
                   <MapPin className="w-4 h-4 text-primary" />
                   <span>{group.location}</span>
                 </div>
+                {group.stacked.map((r, i) => (
+                  <div key={i} className="flex justify-between items-center mb-1">
+                    <span className="text-sm text-gray-300 font-semibold">{r.title}</span>
+                    <div className="flex items-center gap-1 text-sm text-gray-400">
+                      <Calendar className="w-4 h-4 text-primary" />
+                      <span>{r.period}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-                <Calendar className="w-4 h-4 text-primary" />
-                <span>{group.roles[0].period}</span>
+            ) : (
+              <div className="flex flex-col justify-between mt-2">
+                <div className="flex justify-between items-center mb-1">
+                  <span className="text-sm text-gray-300 font-semibold">{group.roles[0].title}</span>
+                  <div className="flex items-center gap-1 text-sm text-gray-400">
+                    <MapPin className="w-4 h-4 text-primary" />
+                    <span>{group.location}</span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
+                  <Calendar className="w-4 h-4 text-primary" />
+                  <span>{group.roles[0].period}</span>
+                </div>
               </div>
-            </div>
+            )}
             <ul className="text-sm space-y-2 mt-3">
               {group.roles[0].responsibilities.map((resp, idx) => (
                 <li key={idx}>

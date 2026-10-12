@@ -3,6 +3,8 @@ export interface Experience {
   company: string;
   location: string;
   period: string;
+  // stacked promotions: extra role lines sharing one bullet list
+  roles?: { title: string; period: string }[];
   responsibilities: string[];
 }
 
@@ -60,18 +62,14 @@ const portfolioData: PortfolioData = {
       title: "sde 1",
       company: "vetic",
       location: "gurgaon, india",
-      period: "jul 2026 to present",
+      period: "jun 2026 to present",
+      roles: [
+        { title: "sde 1", period: "jun 2026 to present" },
+        { title: "sde intern", period: "apr 2025 to jun 2026" }
+      ],
       responsibilities: [
         "developing and maintaining pyvetic, a shared backend platform library providing authentication, database, queuing, observability, and common infrastructure for vetic's backend applications.",
-        "engineered centralized authentication in pyvetic and migrated 15+ backend services to it, standardizing access control and eliminating duplicated implementations."
-      ]
-    },
-    {
-      title: "sde intern",
-      company: "vetic",
-      location: "gurgaon, india",
-      period: "apr 2025 to jun 2026",
-      responsibilities: [
+        "engineered centralized authentication in pyvetic and migrated 15+ backend services to it, standardizing access control and eliminating duplicated implementations.",
         "built a config-driven dsl rule engine for appointment exemptions and architected an automated clinic day-closing reconciliation system.",
         "scaled payment processing by integrating pine labs and razorpay, and designed a centralized cash ledger service for multi-clinic operations.",
         "developed an llm-assisted ocr pipeline for structured vaccination record extraction, using redis, mongodb transactions, and rabbitmq."
