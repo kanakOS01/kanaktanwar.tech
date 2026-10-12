@@ -130,16 +130,10 @@ const portfolioData: PortfolioData = {
       techStack: ["fastapi", "weaviate", "mongodb", "langchain"]
     },
     {
-      title: "social media api",
-      description: "api for a social app. fastapi + postgres, with ci/cd, docker, tests.",
-      githubUrl: "https://github.com/kanakOS01/social-media-fastapi",
-      techStack: ["fastapi", "postgres", "alembic", "pytest", "docker", "github actions"]
-    },
-    {
-      title: "movie recommender",
-      description: "a simple content based movie recommender system.",
-      githubUrl: "https://github.com/kanakOS01/movie-recommender-system",
-      techStack: ["streamlit", "numpy", "pandas", "sklearn"]
+      title: "gravitype",
+      description: "a terminal typing game where words fall from the sky.",
+      githubUrl: "https://github.com/kanakOS01/gravitype",
+      techStack: ["python", "textual"]
     },
     {
       title: "ascii forge",
