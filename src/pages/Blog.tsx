@@ -50,7 +50,7 @@ const Blog = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <div className="max-w-3xl mx-auto">
           <AsciiBorder position="top" />
           <div className="text-center text-primary py-8">Loading articles...</div>
@@ -62,7 +62,7 @@ const Blog = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen">
         <div className="max-w-3xl mx-auto">
           <AsciiBorder position="top" />
           <div className="text-center text-destructive py-8">Error: {error}</div>
@@ -73,7 +73,7 @@ const Blog = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

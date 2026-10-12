@@ -35,11 +35,16 @@ const AsciiProfile = () => {
                   \`!988888888899fT|!^"'
                     \`!9899fT|!^"'
                       \`!^"'`;
+  const [cursorBefore, cursorAfter] = asciiArt.split("##");
 
   return (
     <section className="container mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-center">
       <div className="ascii-container text-primary text-center md:text-left">
-        <pre>{asciiArt}</pre>
+        <pre>
+          {cursorBefore}
+          <span className="ascii-cursor">##</span>
+          {cursorAfter}
+        </pre>
       </div>
       <div className="mt-6 md:mt-0 md:ml-8 max-w-md">
         {about.map((paragraph, index) => (

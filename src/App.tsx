@@ -8,6 +8,7 @@ import Home from "@/pages/Home";
 import Blog from "@/pages/Blog";
 import { OnekoCat } from "@/components/OnekoCat";
 import { CursorFollower } from "@/components/CursorFollower";
+import { StarfieldBackground } from "@/components/StarfieldBackground";
 
 function Router() {
   return (
@@ -23,6 +24,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
+        <StarfieldBackground />
         <Toaster />
         <OnekoCat />
         <CursorFollower />

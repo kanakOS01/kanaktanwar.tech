@@ -15,7 +15,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
