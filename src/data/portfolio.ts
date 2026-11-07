@@ -68,11 +68,15 @@ const portfolioData: PortfolioData = {
         { title: "sde intern", period: "apr 2025 to jun 2026" }
       ],
       responsibilities: [
-        "developing and maintaining pyvetic, a shared backend platform library providing authentication, database, queuing, observability, and common infrastructure for vetic's backend applications.",
-        "engineered centralized authentication in pyvetic and migrated 15+ backend services to it, standardizing access control and eliminating duplicated implementations.",
-        "built a config-driven dsl rule engine for appointment exemptions and architected an automated clinic day-closing reconciliation system.",
-        "scaled payment processing by integrating pine labs and razorpay, and designed a centralized cash ledger service for multi-clinic operations.",
-        "developed an llm-assisted ocr pipeline for structured vaccination record extraction, using redis, mongodb transactions, and rabbitmq."
+        "scaled multi-vendor payment processing across razorpay, payu and pine labs, handling 80k+ monthly transactions and improving payment adherence from 90% to 99.7%.",
+        "developed pai, a multi-agent rag chatbot built on langchain resolving 1000+ customer queries daily.",
+        "automated the reconciliation and cash-closing system, cutting daily clinic closing time from 2 hours to 5 minutes.",
+        "built a dsl-based rules engine with configurable appointment exemptions, reducing revenue leakage to near 0%.",
+        "centralized authentication across 15+ services through pyvetic, a shared python backend library.",
+        "enhanced app booking workflows for membership and add-on sales with dynamic coupon application, supporting 7% membership and 33% add-on attach rates.",
+        "hardened security across the entire vetic platform via api gateway, secrets removal, private storage, and authenticated access controls.",
+        "improved backend reliability with distributed locking, db transactions, connection pooling, caching, and async database clients.",
+        "defined backend architecture and coding standards for a large-scale refactor, including phased migration, testing, and release practices; introduced ai-assisted development workflows."
       ]
     },
     {
@@ -82,7 +86,7 @@ const portfolioData: PortfolioData = {
       period: "jun 2024 to jul 2024",
       responsibilities: [
         "developed a chrome extension generating personalized linkedin outreach messages using llms.",
-        "built internal resume qa tool using langchain and llms, boosting qa efficiency by 40%."
+        "built an internal resume qa tool using langchain and llms, improving qa efficiency by 40%."
       ]
     },
     {
